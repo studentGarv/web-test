@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bikes Category</title>
+  <!-- <link rel="stylesheet" href="universal.css"> -->
+<style>
+  /* CSS Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff7ec; /* Dark background instead of whitesmoke */
+    color: white;
+    font-family: Arial, sans-serif;
+    min-height: 100vh; /* Ensure body covers full viewport height */
+  }
+  
+  /* Navigation */
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    /* background-color: rgba(0, 0, 0, 0.5); Semi-transparent background */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+  }
+
+  .nav-links a {
+    /* color: rgb(0, 0, 0); */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+    color: beige;
+  }
+
+  .nav-links a:hover, .nav-links a.active {
+    color: var(--accent-color);
+  }
+
+  .container {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-bottom: -150px; /* Decreased from -200px to -150px */
+    z-index: 1;
+  }
+  
+  .centered {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* Add these styles to fix the white box issue */
+  .header-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .category-header {
+    background-color: transparent; /* Remove any background */
+  }
+
+  .category-header h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for better visibility */
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 0;
+    color: beige; /* Changed to gold color for better visibility */
+  }
+  .top-right {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+  }
+
+  /* Ensure category section sits on top */
+  .category-section {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-around; /* Changed from center to space-around for better spacing */
+    align-items: flex-start;
+    gap: 40px; /* Increased gap from 20px to 40px */
+    padding-top: 80px; /* Increased padding-top to bring content down */
+    height: auto;
+    width: 100%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    background-color: transparent;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    box-shadow: none;
+    padding-bottom: 50px; /* Added bottom padding */
+  }
+
+  /* Make car items stand out better against the background image */
+  .car-item {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    transform: translateY(-30px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    width: 350px;
+    height: 420px;
+    position: relative; /* Important for absolute positioning inside */
+    overflow: hidden; /* Keep image inside rounded corners */
+    margin: 0 10px;
+  }
+
+  .car-item:hover {
+    transform: translateY(-50px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  }
+
+  .car-item img {
+    width: 100%;
+    height: 100%; /* Full height */
+    object-fit: cover;
+    border-radius: 12px;
+    position: absolute; /* Make image position absolute */
+    top: 0;
+    left: 0;
+  }
+
+  .car-item h3 {
+    position: absolute; /* Position text absolutely */
+    bottom: 0; /* Place at bottom */
+    left: 0;
+    right: 0;
+    font-size: 20px;
+    color: white;
+    margin: 0;
+    padding: 20px 15px;
+    text-align: center;
+    z-index: 2; /* Ensure text is above image */
+    background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.5), transparent); /* Gradient background for better readability */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8); /* Stronger text shadow */
+    border-radius: 0 0 12px 12px; /* Match bottom corners */
+  }
+
+  /* Make sure links don't have default styling */
+  .category-section a {
+    text-decoration: none;
+    color: inherit;
+    display: block; /* Make entire link block-level */
+  }
+
+  /* Footer styling fix */
+  .category-footer {
+    background-color: transparent; /* Remove white background */
+    color: rgb(84, 84, 84); /* Match gold theme */
+    padding: 20px;
+    text-align: center;
+    margin-top: 100px; /* Add some space after the cars */
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <img src="luxury-motorcycles-background-image.jpg" alt="Header Image" class="header-image">
+  <div class="centered"><header class="category-header"><h1>Pandora's box</h1> </header></div>
+  <div class="top-right"><nav class="main-nav">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav></div>
+</div>
+  <section class="category-section">
+    <a href="bugatti.html">
+    <div class="car-item">
+      <img src="bike (1).jpg" alt="Bike 1">
+      <h3>Royal Enfield Model KX</h3>
+    </div>
+    </a>
+    <a href="Notavailable.html">
+    <div class="car-item">
+      <img src="bike (2).jpg" alt="Bike 2">
+      <h3>Vintage Rajdoot</h3>
+    </div>
+    </a>
+    <a href="Notavailable.html">
+    <div class="car-item">
+      <img src="bike (3).jpg" alt="Bike 3">
+      <h3>Vintage Bike</h3>
+    </div>
+    </a>
+  </section>
+  
+
+  <footer class="category-footer">
+    <p>&copy;2024 Pandora's Box. All rights reserved.</p>
+  </footer>
+</body>
+</html>
